@@ -6,7 +6,6 @@ E:\Document\8-Learning\Software Architecture\GraphQL\Source\GraphqlSampleApp\Gra
 E:\Document\8-Learning\Software Architecture\GraphQL\Source\GraphqlSampleApp\GraphqlSampleApp\GraphqlSampleApp.Api\bin\Debug\net6.0\GraphqlSampleApp.Api.dll
 E:\Document\8-Learning\Software Architecture\GraphQL\Source\GraphqlSampleApp\GraphqlSampleApp\GraphqlSampleApp.Api\bin\Debug\net6.0\ref\GraphqlSampleApp.Api.dll
 E:\Document\8-Learning\Software Architecture\GraphQL\Source\GraphqlSampleApp\GraphqlSampleApp\GraphqlSampleApp.Api\bin\Debug\net6.0\GraphqlSampleApp.Api.pdb
-E:\Document\8-Learning\Software Architecture\GraphQL\Source\GraphqlSampleApp\GraphqlSampleApp\GraphqlSampleApp.Api\obj\Debug\net6.0\GraphqlSampleApp.Api.csproj.AssemblyReference.cache
 E:\Document\8-Learning\Software Architecture\GraphQL\Source\GraphqlSampleApp\GraphqlSampleApp\GraphqlSampleApp.Api\obj\Debug\net6.0\GraphqlSampleApp.Api.GeneratedMSBuildEditorConfig.editorconfig
 E:\Document\8-Learning\Software Architecture\GraphQL\Source\GraphqlSampleApp\GraphqlSampleApp\GraphqlSampleApp.Api\obj\Debug\net6.0\GraphqlSampleApp.Api.AssemblyInfoInputs.cache
 E:\Document\8-Learning\Software Architecture\GraphQL\Source\GraphqlSampleApp\GraphqlSampleApp\GraphqlSampleApp.Api\obj\Debug\net6.0\GraphqlSampleApp.Api.AssemblyInfo.cs
@@ -68,3 +67,4 @@ E:\Document\8-Learning\Software Architecture\GraphQL\Source\GraphqlSampleApp\Gra
 E:\Document\8-Learning\Software Architecture\GraphQL\Source\GraphqlSampleApp\GraphqlSampleApp\GraphqlSampleApp.Api\bin\Debug\net6.0\runtimes\linux\native\libmongocrypt.so
 E:\Document\8-Learning\Software Architecture\GraphQL\Source\GraphqlSampleApp\GraphqlSampleApp\GraphqlSampleApp.Api\bin\Debug\net6.0\runtimes\osx\native\libmongocrypt.dylib
 E:\Document\8-Learning\Software Architecture\GraphQL\Source\GraphqlSampleApp\GraphqlSampleApp\GraphqlSampleApp.Api\bin\Debug\net6.0\runtimes\win\native\mongocrypt.dll
+E:\Document\8-Learning\Software Architecture\GraphQL\Source\GraphqlSampleApp\GraphqlSampleApp\GraphqlSampleApp.Api\obj\Debug\net6.0\GraphqlSampleApp.Api.csproj.AssemblyReference.cache

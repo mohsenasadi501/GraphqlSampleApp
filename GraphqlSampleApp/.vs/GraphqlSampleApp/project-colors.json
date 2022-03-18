@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "e1f6d935-fce6-4275-ba24-2246908182cd": {
+      "ProjectGuid": "e1f6d935-fce6-4275-ba24-2246908182cd",
+      "DisplayName": "GraphqlSampleApp.Api",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
