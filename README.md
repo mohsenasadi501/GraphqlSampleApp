@@ -1,6 +1,6 @@
 # GraphQL Sample App
 
-GraphQL Hot Chocolate with MongoDB
+HotChocolate GraphQL with MongoDB
 
 ## Getting Started
 
