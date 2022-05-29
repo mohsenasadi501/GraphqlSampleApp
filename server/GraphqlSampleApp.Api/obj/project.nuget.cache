@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6SyUBckyU5bcbbTYLkXe3Du+tZqSmWnIQ604wfLPuKowQiAgwl/FyUrHWhzgFMcEMieLVbP1J6TC5xc6+Tu35w==",
+  "dgSpecHash": "IcYx2X1Mz7hErkT8nM6/sAF+LmhXu1NE0q8Vq0kEXyeYAQrcXm17Oy/grG8RwKNEiv2Gmt/pFqWXIInvsNmfGQ==",
   "success": true,
-  "projectFilePath": "E:\\Document\\8-Learning\\Software Architecture\\GraphQL\\Source\\GraphqlSampleApp\\GraphqlSampleApp\\GraphqlSampleApp.Api\\GraphqlSampleApp.Api.csproj",
+  "projectFilePath": "E:\\Document\\8-Learning\\Software Architecture\\GraphQL\\Source\\GraphqlSampleApp\\server\\GraphqlSampleApp.Api\\GraphqlSampleApp.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mohsen\\.nuget\\packages\\dnsclient\\1.6.0\\dnsclient.1.6.0.nupkg.sha512",
     "C:\\Users\\Mohsen\\.nuget\\packages\\greendonut\\12.6.1\\greendonut.12.6.1.nupkg.sha512",

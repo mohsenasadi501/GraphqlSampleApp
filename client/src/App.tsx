@@ -1,10 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import gql from "graphql-tag";
+import { useQuery } from "@apollo/react-hooks";
 
+const GET_USERS = gql`
+  query {
+    users {
+      nodes {
+        bio
+        id
+        emailAddress
+      }
+    }
+  }
+`;
 function App() {
+  const { data } = useQuery(GET_USERS);
+
   return (
     <div className="App">
+      {console.log(data)}
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

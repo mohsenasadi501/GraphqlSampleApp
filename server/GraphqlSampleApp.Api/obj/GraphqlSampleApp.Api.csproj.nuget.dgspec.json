@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Document\\8-Learning\\Software Architecture\\GraphQL\\Source\\GraphqlSampleApp\\GraphqlSampleApp\\GraphqlSampleApp.Api\\GraphqlSampleApp.Api.csproj": {}
+    "E:\\Document\\8-Learning\\Software Architecture\\GraphQL\\Source\\GraphqlSampleApp\\server\\GraphqlSampleApp.Api\\GraphqlSampleApp.Api.csproj": {}
   },
   "projects": {
-    "E:\\Document\\8-Learning\\Software Architecture\\GraphQL\\Source\\GraphqlSampleApp\\GraphqlSampleApp\\GraphqlSampleApp.Api\\GraphqlSampleApp.Api.csproj": {
+    "E:\\Document\\8-Learning\\Software Architecture\\GraphQL\\Source\\GraphqlSampleApp\\server\\GraphqlSampleApp.Api\\GraphqlSampleApp.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Document\\8-Learning\\Software Architecture\\GraphQL\\Source\\GraphqlSampleApp\\GraphqlSampleApp\\GraphqlSampleApp.Api\\GraphqlSampleApp.Api.csproj",
+        "projectUniqueName": "E:\\Document\\8-Learning\\Software Architecture\\GraphQL\\Source\\GraphqlSampleApp\\server\\GraphqlSampleApp.Api\\GraphqlSampleApp.Api.csproj",
         "projectName": "GraphqlSampleApp.Api",
-        "projectPath": "E:\\Document\\8-Learning\\Software Architecture\\GraphQL\\Source\\GraphqlSampleApp\\GraphqlSampleApp\\GraphqlSampleApp.Api\\GraphqlSampleApp.Api.csproj",
+        "projectPath": "E:\\Document\\8-Learning\\Software Architecture\\GraphQL\\Source\\GraphqlSampleApp\\server\\GraphqlSampleApp.Api\\GraphqlSampleApp.Api.csproj",
         "packagesPath": "C:\\Users\\Mohsen\\.nuget\\packages\\",
-        "outputPath": "E:\\Document\\8-Learning\\Software Architecture\\GraphQL\\Source\\GraphqlSampleApp\\GraphqlSampleApp\\GraphqlSampleApp.Api\\obj\\",
+        "outputPath": "E:\\Document\\8-Learning\\Software Architecture\\GraphQL\\Source\\GraphqlSampleApp\\server\\GraphqlSampleApp.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

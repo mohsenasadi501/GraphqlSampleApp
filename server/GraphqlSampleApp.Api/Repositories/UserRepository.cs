@@ -20,7 +20,7 @@ namespace GraphqlSampleApp.Api.Repositories
 
         public UserRepository(IMongoClient client, IOptions<JwtSettings> jwtSettings, IUserRoleRepository userRoleRepository)
         {
-            var database = client.GetDatabase("MyDB");
+            var database = client.GetDatabase("NFTDB");
             var collection = database.GetCollection<User>(nameof(User));
             _user = collection;
             _userRoleRepository = userRoleRepository;
