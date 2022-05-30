@@ -1,11 +1,13 @@
 ﻿using GraphqlSampleApp.Api.Models.User;
 using GraphqlSampleApp.Api.Repositories;
+using HotChocolate.AspNetCore.Authorization;
 using HotChocolate.Subscriptions;
 using static GraphqlSampleApp.Api.Models.User.UserPayload;
 namespace GraphqlSampleApp.Api.Types
 {
     public class Mutation
     {
+        [Authorize]
         public async Task<CreateUserPayload> CreateUser([Service] IUserRepository userRepository, [Service] ITopicEventSender eventSender, CreateUserInput createUserInput)
         {
             var item = userRepository.CreateUser(createUserInput);
@@ -23,6 +25,7 @@ namespace GraphqlSampleApp.Api.Types
             var item = userRepository.UpdateUser(id, updateUserInput);
             return new UpdateUserPayload(item);
         }
+       
         public UserTokenPayload Login([Service] IUserRepository userRepository, LoginInput loginInput)
         {
             return userRepository.Login(loginInput);

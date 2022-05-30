@@ -1,6 +1,5 @@
 ﻿using GraphqlSampleApp.Api.Models.User;
 using GraphqlSampleApp.Api.Repositories;
-using HotChocolate.AspNetCore.Authorization;
 using HotChocolate.Data;
 
 namespace GraphqlSampleApp.Api.Types

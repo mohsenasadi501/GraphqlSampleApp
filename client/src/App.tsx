@@ -52,18 +52,9 @@ function App() {
 
   //const { data } = useQuery(GET_USERS);
   const [adduser, { loading, error }] = useMutation(CREATE_USERS, {
-    update: (data) => {
-      // const { posts } = cache.readQuery(GET_POSTS);
-      // const newPost = data.update_posts.returning;
-      // const updatedPosts = posts.map((post) =>
-      //   post.id === id ? newPost : post
-      // );
-      // cache.writeQuery({ query: GET_POSTS, data: { posts: updatedPosts } });
-    },
     onCompleted: () => console.log("Add user seccessfully"),
   });
   const [login] = useMutation(LOGIN, {
-    update: (data) => {},
     onCompleted: (data) => {
       localStorage.setItem("token", data.login.accessToken);
     },
