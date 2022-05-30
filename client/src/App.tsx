@@ -3,6 +3,7 @@ import "./App.css";
 import gql from "graphql-tag";
 import { useQuery, useMutation } from "@apollo/react-hooks";
 import CreateUserInput from "./models/CreateUserInput";
+import LoginInput from "./models/LoginInput";
 const GET_USERS = gql`
   query {
     users {
@@ -28,6 +29,15 @@ const CREATE_USERS = gql`
     }
   }
 `;
+const LOGIN = gql`
+  mutation login($input: LoginInput!) {
+    login(loginInput: $input) {
+      message
+      accessToken
+      refreshToken
+    }
+  }
+`;
 function App() {
   const [bio, setBio] = useState("");
   const [password, setPassword] = useState("");
@@ -37,8 +47,10 @@ function App() {
   const [profileImageUrl, setProfileImageUrl] = useState("");
   const [walletAddress, setWalletAddress] = useState("");
   const [walletType, setWalletType] = useState("");
+  const [loginUserName, setloginUserName] = useState("");
+  const [loginPassword, setloginPassword] = useState("");
 
-  const { data } = useQuery(GET_USERS);
+  //const { data } = useQuery(GET_USERS);
   const [adduser, { loading, error }] = useMutation(CREATE_USERS, {
     update: (data) => {
       // const { posts } = cache.readQuery(GET_POSTS);
@@ -50,7 +62,19 @@ function App() {
     },
     onCompleted: () => console.log("Add user seccessfully"),
   });
+  const [login] = useMutation(LOGIN, {
+    update: (data) => {},
+    onCompleted: (data) => {
+      localStorage.setItem("token", data.login.accessToken);
+    },
+  });
 
+  const handleLoginUserName = (event: any) => {
+    setloginUserName(event.target.value);
+  };
+  const handleLoginPassword = (event: any) => {
+    setloginPassword(event.target.value);
+  };
   const handleBio = (event: any) => {
     setBio(event.target.value);
   };
@@ -89,12 +113,50 @@ function App() {
     };
     adduser({ variables: { input: userInput } });
   }
+  function handleLogin() {
+    let loginInput: LoginInput = {
+      userName: loginUserName,
+      password: loginPassword,
+    };
+    login({ variables: { input: loginInput } });
+  }
 
   return (
     <>
       <div className="container">
         <div className="row">
-          <div className="col"></div>
+          <div className="col">
+            <br></br>
+            <div className="input-group mb-3">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="loginUserName"
+                aria-label="loginUserName"
+                aria-describedby="basic-addon1"
+                onChange={handleLoginUserName}
+              ></input>
+            </div>
+            <div className="input-group mb-3">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="loginPassword"
+                aria-label="loginPassword"
+                aria-describedby="basic-addon1"
+                onChange={handleLoginPassword}
+              ></input>
+            </div>
+            <div className="input-group mb-3">
+              <button
+                type="button"
+                className="btn btn-primary form-control"
+                onClick={handleLogin}
+              >
+                Add User
+              </button>
+            </div>
+          </div>
           <div className="col"></div>
           <div className="col">
             <br></br>
@@ -136,6 +198,16 @@ function App() {
                 aria-label="profileBannerUrl"
                 aria-describedby="basic-addon1"
                 onChange={handleProfileBannerUrl}
+              ></input>
+            </div>
+            <div className="input-group mb-3">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="profileImageUrl"
+                aria-label="profileImageUrl"
+                aria-describedby="basic-addon1"
+                onChange={handleProfileImageUrl}
               ></input>
             </div>
             <div className="input-group mb-3">
