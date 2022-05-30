@@ -5,6 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { ApolloProvider } from "@apollo/react-hooks";
 import client from "./services/client";
+import 'bootstrap/dist/css/bootstrap.css';
 
 // Importing Sass with Bootstrap CSS
 
