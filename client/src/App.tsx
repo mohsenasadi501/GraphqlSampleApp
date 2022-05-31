@@ -38,6 +38,17 @@ const LOGIN = gql`
     }
   }
 `;
+const USER_SUBSCRIPTION = gql`
+  subscription{
+    subscribeUser {
+      id,
+      userName,
+      password,
+      bio,
+      profileImageUrl
+    }
+  }
+`
 function App() {
   const [bio, setBio] = useState("");
   const [password, setPassword] = useState("");
