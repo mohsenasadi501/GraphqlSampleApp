@@ -1,30 +1,28 @@
 # GraphQL Sample App
 
 ServerSide: ASP.Net Core API with HotChocolate GraphQL and  MongoDB
+
 ClientSide: Reactjs with Apollo Client
+
 ## Getting Started
 
 Clone the repository to your local machine or download project zip file to your local machine.
 
-### ServerSide Prerequisites
-
 For running this project you need the following items to Installed on your local machine
 
+### Serverside Prerequisites
 
 * [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/vs/) - IDE
 * [Dotnet 6 ](https://maven.apache.org/) - Framework
 * [MongoDB](https://www.mongodb.com/try/download/community) - DataBase Engin for store data
 
-### ClientSide Prerequisites
-
-For running this project you need the following items to Installed on your local machine
-
+### Clientside Prerequisites
 
 * [Microsoft Visual Studio Code](https://code.visualstudio.com/download) - IDE
 * [NPM](https://nodejs.org/en/download/) - Package Manager
 
 
-### ServerSide Installing
+### Serverside Installing
 
 Run the below command to restore, build and run the project
 
@@ -45,7 +43,7 @@ Run Server Project
 dotnet run
 ```
 
-### ClientSide Installing
+### Clientside Installing
 
 Run the below command to install dependencies and run project
 
