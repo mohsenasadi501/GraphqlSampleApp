@@ -1,4 +1,4 @@
-# GraphQL Sample App
+# GraphQL With HotChocolate and Apollo
 
 **Serverside**: ASP.Net Core API with HotChocolate GraphQL and  MongoDB
 
