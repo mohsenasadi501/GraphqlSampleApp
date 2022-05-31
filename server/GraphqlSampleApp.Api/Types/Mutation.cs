@@ -10,10 +10,17 @@ namespace GraphqlSampleApp.Api.Types
         [Authorize]
         public async Task<CreateUserPayload> CreateUser([Service] IUserRepository userRepository, [Service] ITopicEventSender eventSender, CreateUserInput createUserInput)
         {
-            var item = userRepository.CreateUser(createUserInput);
-            await eventSender.SendAsync(nameof(Subscription.SubscribeUser), createUserInput);
+            try
+            {
+                var item = userRepository.CreateUser(createUserInput);
+                await eventSender.SendAsync(nameof(Subscription.SubscribeUser), item);
 
-            return new CreateUserPayload(item);
+                return new CreateUserPayload(item);
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
         }
         public DeleteUserPayload DeleteUser([Service] IUserRepository userRepository, [ID] Guid id)
         {
@@ -25,7 +32,7 @@ namespace GraphqlSampleApp.Api.Types
             var item = userRepository.UpdateUser(id, updateUserInput);
             return new UpdateUserPayload(item);
         }
-       
+
         public UserTokenPayload Login([Service] IUserRepository userRepository, LoginInput loginInput)
         {
             return userRepository.Login(loginInput);

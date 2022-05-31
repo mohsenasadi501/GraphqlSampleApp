@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import gql from "graphql-tag";
-import { useQuery, useMutation } from "@apollo/react-hooks";
+import { useQuery, useSubscription, useMutation } from "@apollo/react-hooks";
 import CreateUserInput from "./models/CreateUserInput";
 import LoginInput from "./models/LoginInput";
 const GET_USERS = gql`
@@ -39,16 +39,16 @@ const LOGIN = gql`
   }
 `;
 const USER_SUBSCRIPTION = gql`
-  subscription{
+  subscription {
     subscribeUser {
-      id,
-      userName,
-      password,
-      bio,
+      id
+      userName
+      password
+      bio
       profileImageUrl
     }
   }
-`
+`;
 function App() {
   const [bio, setBio] = useState("");
   const [password, setPassword] = useState("");
@@ -62,6 +62,7 @@ function App() {
   const [loginPassword, setloginPassword] = useState("");
 
   //const { data } = useQuery(GET_USERS);
+
   const [adduser, { loading, error }] = useMutation(CREATE_USERS, {
     onCompleted: () => console.log("Add user seccessfully"),
   });
@@ -101,7 +102,21 @@ function App() {
   const handleWalletType = (event: any) => {
     setWalletType(event.target.value);
   };
+  // where id comes from route params -> /post/:id
+  function SubscribeUser() {
+    const { loading, error, data } = useSubscription(USER_SUBSCRIPTION)
 
+    if (loading) return <div>Loading...</div>;
+    if (error) return <div>Error!</div>;
+    
+    console.log(data.subscribeUser.id)
+
+    return (
+      <div>
+        <h1>{data.subscribeUser.id}</h1>
+      </div>
+    );
+  }
   function handleAddUser() {
     let userInput: CreateUserInput = {
       bio: bio,
@@ -126,6 +141,9 @@ function App() {
   return (
     <>
       <div className="container">
+        {
+          SubscribeUser()
+        }
         <div className="row">
           <div className="col">
             <br></br>
