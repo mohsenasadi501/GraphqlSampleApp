@@ -14,7 +14,7 @@ For running this project you need the following items to Installed on your local
 
 * [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/vs/) - IDE
 * [Dotnet 6 ](https://maven.apache.org/) - Framework
-* [MongoDB](https://www.mongodb.com/try/download/community) - DataBase Engin for store data
+* [MongoDB](https://www.mongodb.com/try/download/community) - DataBase Engine for store data
 
 ### Clientside Prerequisites
 
